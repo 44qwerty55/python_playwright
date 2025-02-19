@@ -4,6 +4,7 @@ from playwright.sync_api import expect
 test_data = [
     ("locked_out_user", "secret_sauce", "Epic sadface: Sorry, this user has been locked out."),
     ("visual_user", "another_value", "Epic sadface: Username and password do not match any user in this service"),
+    ("another_value", "secret_sauce", "Epic sadface: Username and password do not match any user in this service"),
     ("visual_user", "", "Epic sadface: Password is required"),
     ("", "secret_sauce", "Epic sadface: Username is required"),
 ]
