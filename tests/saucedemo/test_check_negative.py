@@ -20,7 +20,7 @@ def test_login(open_base_page, user, password, error_message):
     button.click()
     page.wait_for_timeout(1000)
 
-    page.wait_for_url(page.url)
+    expect(page).to_have_url(page.url)
     error_button = page.locator('h3[data-test="error"]')
     expect(error_button).to_be_visible()
     expect(error_button).to_have_text(error_message)
