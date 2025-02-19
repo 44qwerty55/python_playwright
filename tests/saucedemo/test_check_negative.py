@@ -18,7 +18,7 @@ def test_login(open_base_page, user, password, error_message):
     button = page.get_by_role('button', name='Login')
     button.click()
 
-    page.wait_for_url('https://www.saucedemo.com/')
+    page.wait_for_url(page.url)
     error_button = page.locator('h3[data-test="error"]')
     expect(error_button).to_be_visible()
     expect(error_button).to_have_text(error_message)
