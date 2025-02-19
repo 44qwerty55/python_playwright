@@ -13,7 +13,7 @@ test_data = [
 ]
 
 @pytest.mark.parametrize("user, password, result, error_message", test_data)
-def test_write_you_name_text(open_base_page, user, password, result, error_message):
+def test_login(open_base_page, user, password, result, error_message):
     page = open_base_page
     select_user_name_element = page.locator('[id="user-name"]')
     select_user_name_element.fill(user)
