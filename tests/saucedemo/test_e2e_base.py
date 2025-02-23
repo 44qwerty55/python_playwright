@@ -1,5 +1,3 @@
-from playwright.sync_api import Page, expect
-
 from data.default_snapshots import CHECKOUT_COMPLETE_DEFAULT_SNAPSHOT
 
 
@@ -16,5 +14,6 @@ def test_emd_2_end_scenario(get_default_users, open_base_page, login_page, inven
     checkout_complete_page.validate_back_to_products()
     checkout_complete_page.validate_title("Checkout: Complete!")
     checkout_complete_page.validate_complete_header("Thank you for your order!")
-    checkout_complete_page.validate_complete_text("Your order has been dispatched, and will arrive just as fast as the pony can get there!")
+    checkout_complete_page.validate_complete_text(
+        "Your order has been dispatched, and will arrive just as fast as the pony can get there!")
     checkout_complete_page.validate_snapshot(CHECKOUT_COMPLETE_DEFAULT_SNAPSHOT)
