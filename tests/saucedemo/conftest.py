@@ -1,6 +1,7 @@
 import pytest
 from playwright.sync_api import Page
 
+from pages.inventory_page import InventoryPage
 from pages.login_page import LoginPage
 
 
@@ -14,4 +15,6 @@ def open_base_page(page: Page):
 def login_page(page: Page):
     return LoginPage(page)
 
-
+@pytest.fixture
+def inventory_page(page: Page):
+    return InventoryPage(page)
