@@ -1,0 +1,2 @@
+INVENTORY_DEFAULT_SNAPSHOT = "- text: Products Name (A to Z)\n- combobox:\n  - option \"Name (A to Z)\" [selected]\n  - option \"Name (Z to A)\"\n  - option \"Price (low to high)\"\n  - option \"Price (high to low)\""
+CHECKOUT_COMPLETE_DEFAULT_SNAPSHOT = "- text: Swag Labs"
