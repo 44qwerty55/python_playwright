@@ -29,3 +29,5 @@ jobs:
       run: python -m playwright install --with-deps
     - name: Test with Pytest & Playwright
       run: pytest
+      env:
+        DEFAULT_PASSWORD: ${{ secrets.DEFAULT_PASSWORD }}
